@@ -1,0 +1,22 @@
+%link{:rel => "stylesheet", :href => "/css/style.css", :type => "text/css"}
+
+%form{ :action=>'/new',  :method => 'post'}
+  %input{ :type =>'text',  :name =>"task[name]"}
+  %input{ :type =>'submit', :value => 'Submit'}
+
+
+%h2
+  My Tasks
+%h3
+  - @tasks.sort! { |a, b|  a.name <=> b.name }
+  = @tasks.class
+%ul
+  - @tasks.each do |task|
+    <li>#{task.name}&nbsp;&nbsp;&nbsp;<a href="/delete/#{task.id}-#{task.name}">delete</a></li>
+
+    %form{ :action => "/complete2", :method =>'post'}
+      %input{ :type => "hidden", :name =>"_id", :value =>"#{task.id}"}
+      -if task.completed_at.nil?
+        %input{ :type => 'submit' , :value => "  ", :title =>'Complete task'}
+      -else
+        %input{ :type => 'submit' , :value => '✓' ,:title =>'Uncomplete task'}

@@ -1,0 +1,66 @@
+h1 {
+  color: #334499;
+  text-align: center;
+  }
+
+p {
+  color:blue;
+}
+
+p.newitem {
+  color: red;
+  font-family: Times New Roman, Helvetica, sans-serif;
+}
+
+.orange {
+  color: orange;
+}
+.completed{
+  text-decoration: line-through;
+  }
+
+
+.task{
+  position:relative;
+  padding:2px 0 2px 28px;
+  border-bottom: dotted 1px #ccc;
+  color: #33EEFF;
+}
+
+form.update{
+  position:absolute;
+  bottom:2px;
+  left:0;
+  }
+form.update input{
+  background:white;
+  color:white;
+  padding:0 2px;
+  border:solid 1px gray;
+  cursor:pointer;
+}
+
+/*
+.tasks li.completed form.update input{
+  color:#47FD6B;
+  }
+*/
+ul {
+  list-style-type: circle;
+  padding-left: 40px;
+  width:400px;
+  }
+
+li {
+  color: green;
+}
+
+form.delete{
+  display:inline;
+  }
+
+form.delete input{
+  background:none;
+  cursor:pointer;
+  border:none;
+  }

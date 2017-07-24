@@ -1,0 +1,6 @@
+development:
+    adapter: 'mysql2'
+    host: 'localhost'
+    database: 'todoSitepoint'
+    user: 'root'
+    password: 'xnynzn987'
